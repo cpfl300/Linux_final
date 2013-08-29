@@ -4,7 +4,7 @@ import java.util.Random;
 public class Pie implements Runnable {
 	
 	final static long MAX = 40000000;
-	final static int THREAD_NUM = 4;
+	final static int THREAD_NUM = 100;
 	final static long LOOP_NUM = MAX/THREAD_NUM;
 	static int id = 0;
 	static double totalDot = 0;
