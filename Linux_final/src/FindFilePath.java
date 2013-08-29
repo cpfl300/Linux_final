@@ -16,9 +16,12 @@ public class FindFilePath {
 		
 		String[] fileList = targetFile.list();
 		
-		for(String FilesName : fileList){			
-			if (FilesName == fileName) isContain = true;
-			else System.out.println("differ"); //why???
+		for(String FilesName : fileList){		
+			if (FilesName.equals(fileName)) isContain = true;
+			else{
+				System.out.println("This directory not have this file");
+				System.exit(1);
+			}
 		}
 		
 		if (isContain == true){
