@@ -18,9 +18,12 @@ public class FindFilePath {
 		
 		for(String FilesName : fileList){		
 			if (FilesName.equals(fileName)) isContain = true;
-			else{
-				System.out.println("This directory not have this file");
-				System.exit(1);
+			else {
+				String newPath = dPath +"/"+FilesName;
+				File dire = new File(newPath);
+				if(dire.isDirectory()){
+					findPath(newPath,fileName);
+				}
 			}
 		}
 		
